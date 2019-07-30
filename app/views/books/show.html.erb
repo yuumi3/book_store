@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Image:</strong>
+  <%= image_tag "/images/#{@book.image_name}" %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @book.title %>
 </p>
