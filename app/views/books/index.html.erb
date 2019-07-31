@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Books</h1>
 
-<table class="striped" style="margin: 0 auto; width: 80%;">
+<table class="striped">
   <thead>
     <tr>
-      <th>Image</th>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Price</th>
+      <th></th>
+      <th>タイトル</th>
+      <th>著者</th>
+      <th>値段</th>
     </tr>
   </thead>
 
@@ -18,7 +17,7 @@
         <td><%= link_to image_tag("/images/#{book.image_name}", height: 150), book %></td>
         <td><%= link_to book.title, book %></td>
         <td><%= book.author %></td>
-        <td><%= book.price %></td>
+        <td><%= yen(book.price) %></td>
       </tr>
     <% end %>
   </tbody>
