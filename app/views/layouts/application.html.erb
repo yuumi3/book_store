@@ -14,9 +14,8 @@
       <div class="nav-wrapper">
         <a href="/books" class="brand-logo">Rails books</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
+          <li> <%= current_user ? "ようこそ #{current_user.name} さん" : "" %>  </li>
+          <li> <%= link_to 'ログアウト', logout_path %></li>
         </ul>
       </div>
     </nav>

@@ -22,3 +22,6 @@ Book.create!(title: "Ｒｕｂｙ Ｏｎ Ｒａｉｌｓ ５の上手な使い�
 Book.create!(title: "Ｒｕｂｙ ｏｎ Ｒａｉｌｓ ５アプリケーションプログラミング", author: "山田祥寛",
   price: 3888, image_name: "28400072_1.png",
   description: "大幅進化した定番ＭＶＣのフレームワークの全機能が学べる、「Ｒｕｂｙ ｏｎ Ｒａｉｌｓ」を初めて学ぶ人のためのテキスト。サンプルプログラムをダウンロードできるＵＲＬ付き。\n\n本書は、MVCに則った定番Webアプリケーションフレームワークの最新版であるRuby on Rails 5を対象に、Scaffolding機能から、ビュー／モデル／コントローラ開発、ルーティング、テスト、クライアントサイド開発まで、Railsの主要機能を徹底解説しています。バージョン4.1以降に追加されたWebConsoleなどの機能や、バージョン5の新機能であるAction CableやRails APIなども詳しく解説しているので、最新技術を取り入れたWebアプリ開発にも柔軟に対応できます！")
+
+User.delete_all
+User.create!(name: 'Yamada', email: 'yama@book.com', password: 'test@12')
