@@ -15,16 +15,31 @@
  *= require_self
  */
 
- @import 'materialize';
+@import 'materialize';
 
- a:hover {
-   background-color: transparent;
- }
+a:hover {
+  background-color: transparent;
+}
 
- a:visited, a.btn:visited {
+a:visited {
   color: inherit;
+}
+a.btn:visited {
+  color: white;
 }
 .notice {
   color: green;
 }
+nav .brand-logo  {
+  padding-left: 12px;
+}
+#nav-mobile {
+  padding-top: 6px;
+}
 
+.book-specs {
+  font-size: 1.15rem;
+}
+.book-specs div {
+  margin-top: 10px;
+}
