@@ -15,7 +15,18 @@
         <a href="/books" class="brand-logo">Rails books</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li> <%= current_user ? "ようこそ #{current_user.name} さん" : "" %>  </li>
-          <li> <%= link_to 'ログアウト', logout_path %></li>
+          <li>
+          <% if current_user %>
+            <%= link_to "カート表示(#{current_user.cart_count})", carts_path %>
+          <% end %>
+          </li>
+          <li>
+            <% if current_user %>
+              <%= link_to 'ログアウト', logout_path %>
+            <% else %>
+              <%= link_to 'ログイン', login_path %>
+            <% end %>
+          </li>
         </ul>
       </div>
     </nav>

@@ -20,8 +20,11 @@
  a:hover {
    background-color: transparent;
  }
- a:visited {
+
+ a:visited, a.btn:visited {
   color: inherit;
 }
-
+.notice {
+  color: green;
+}
 

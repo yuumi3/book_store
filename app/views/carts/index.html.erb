@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h2>ショッピングカート</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>書籍</th>
+      <th>数量</th>
+      <th>小計</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carts.each do |cart| %>
+      <tr>
+        <td><%= link_to image_tag("/images/#{cart.book.image_name}", height: 150), book_path(cart.book.id) %></td>
+        <td>
+          <p><%= cart.book.title %></p>
+          <p><%=yen cart.book.price %></p>
+        </td>
+        <td><%= cart.quantity %></td>
+        <td><%= yen cart.sub_total %></td>
+        <td><%= link_to '変更', edit_cart_path(cart), class:"waves-effect waves-light btn" %></td>
+        <td><%= link_to '削除', cart, method: :delete, data: { confirm: '削除して良いですか?' }, class:"waves-effect red accent-4 btn" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+  <tfoot>
+  <tr>
+    <th colspan="2"></th>
+    <th>合計</th>
+    <th><%= yen Cart.total(current_user) %></th>
+    <th colspan="2"></th>
+  </tr>
+</tfoot>
+
+</table>
+
+<br>
+
+<%= link_to "戻る", books_path, class: "waves-effect orange lighten-3 btn" %>
