@@ -1,24 +1,19 @@
-# README
+# Ruby on Rails テスト用サンプル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### setup
 
-Things you may want to cover:
+```
+$ git clone https://github.com/yuumi3/book_store
+$ cd book_store
+$ rake db:migrate
+$ rake db:migrate RAILS_ENV=test
+$ rake db:seed
+```
 
-* Ruby version
+### Testing
 
-* System dependencies
+```
+$ rake test
+$ rake test:system
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
