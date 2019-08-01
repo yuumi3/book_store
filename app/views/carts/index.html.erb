@@ -16,7 +16,7 @@
   <tbody>
     <% @carts.each do |cart| %>
       <tr>
-        <td><%= link_to image_tag("/images/#{cart.book.image_name}", height: 150), book_path(cart.book.id) %></td>
+        <td><%= link_to image_tag(image_path(cart.book.image_name), height: 150), book_path(cart.book.id) %></td>
         <td>
           <p><%= cart.book.title %></p>
           <p><%=yen cart.book.price %></p>

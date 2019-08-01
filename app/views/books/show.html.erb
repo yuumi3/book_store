@@ -5,7 +5,7 @@
   <div class="col s12">
     <div class="card">
     <div class="card-image">
-      <%= image_tag "/images/#{@book.image_name}", style: "width: auto" %>
+      <%= image_tag image_path(@book.image_name), style: "width: auto" %>
       </div>
       <div class="card-content">
         <span class="card-title"><%= @book.title %></span>
